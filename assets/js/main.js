@@ -251,8 +251,42 @@
 						}
 					});
 
+					// Initialize all carousels
+$('.carousel').each(function() {
+    var $carousel = $(this);
+    var $images = $carousel.find('.carousel-images');
+    var $prev = $carousel.find('.carousel-prev');
+    var $next = $carousel.find('.carousel-next');
+    var index = 0;
+    var total = $images.find('img').length;
+
+    // Hide prev arrow initially if at first image
+    if (index === 0) $prev.hide();
+
+    $next.click(function(e) {
+        e.preventDefault();
+        if (index < total - 1) {
+            index++;
+            $images.css('transform', 'translateX(' + (-index * 100) + '%)');
+            $prev.show();
+            if (index === total - 1) $next.hide();
+        }
+    });
+
+    $prev.click(function(e) {
+        e.preventDefault();
+        if (index > 0) {
+            index--;
+            $images.css('transform', 'translateX(' + (-index * 100) + '%)');
+            $next.show();
+            if (index === 0) $prev.hide();
+        }
+    });
+});
+
 			});
 
 		}
+
 
 })(jQuery);
