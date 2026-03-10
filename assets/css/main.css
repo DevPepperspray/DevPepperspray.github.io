@@ -4678,27 +4678,6 @@ input, select, textarea {
 			opacity: 0.5;
 		}
 
-
-/* Hide arrows on mobile if desired */
-@media screen and (max-width: 736px) {
-    .carousel-prev,
-    .carousel-next {
-        padding: 5px;
-        font-size: 14px;
-    }
-}
-
-		body.is-navPanel-visible #navPanel {
-			-moz-transform: translateX(0);
-			-webkit-transform: translateX(0);
-			-ms-transform: translateX(0);
-			transform: translateX(0);
-			box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.2);
-			visibility: visible;
-		}
-
-	}
-
 		body.is-navPanel-visible #navPanel {
 			-moz-transform: translateX(0);
 			-webkit-transform: translateX(0);
@@ -4735,7 +4714,7 @@ input, select, textarea {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.3); /* More transparent */
+    background: rgba(0,0,0,0.3);
     color: white;
     width: 40px;
     height: 40px;
@@ -4774,6 +4753,3 @@ input, select, textarea {
         font-size: 16px;
     }
 }
-
-
-
