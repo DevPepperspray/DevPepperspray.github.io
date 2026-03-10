@@ -251,42 +251,52 @@
 						}
 					});
 
-					// Initialize all carousels
-$('.carousel').each(function() {
-    var $carousel = $(this);
-    var $images = $carousel.find('.carousel-images');
-    var $prev = $carousel.find('.carousel-prev');
-    var $next = $carousel.find('.carousel-next');
-    var index = 0;
-    var total = $images.find('img').length;
-
-    // Hide prev arrow initially if at first image
-    if (index === 0) $prev.hide();
-
-    $next.click(function(e) {
-        e.preventDefault();
-        if (index < total - 1) {
-            index++;
-            $images.css('transform', 'translateX(' + (-index * 100) + '%)');
-            $prev.show();
-            if (index === total - 1) $next.hide();
-        }
-    });
-
-    $prev.click(function(e) {
-        e.preventDefault();
-        if (index > 0) {
-            index--;
-            $images.css('transform', 'translateX(' + (-index * 100) + '%)');
-            $next.show();
-            if (index === 0) $prev.hide();
-        }
-    });
-});
-
 			});
 
 		}
 
+		// Initialize carousels (AFTER all theme code)
+		$(document).ready(function() {
+			$('.carousel').each(function() {
+				var $carousel = $(this);
+				var $images = $carousel.find('.carousel-images');
+				var $prev = $carousel.find('.carousel-prev');
+				var $next = $carousel.find('.carousel-next');
+				var index = 0;
+				var total = $images.find('img').length;
+				
+				// Only initialize if there's more than one image
+				if (total > 1) {
+					// Hide prev arrow initially
+					$prev.hide();
+					
+					$next.off('click').on('click', function(e) {
+						e.preventDefault();
+						e.stopPropagation();
+						if (index < total - 1) {
+							index++;
+							$images.css('transform', 'translateX(' + (-index * 100) + '%)');
+							$prev.show();
+							if (index === total - 1) $next.hide();
+						}
+					});
+					
+					$prev.off('click').on('click', function(e) {
+						e.preventDefault();
+						e.stopPropagation();
+						if (index > 0) {
+							index--;
+							$images.css('transform', 'translateX(' + (-index * 100) + '%)');
+							$next.show();
+							if (index === 0) $prev.hide();
+						}
+					});
+				} else {
+					// Hide arrows if only one image
+					$prev.hide();
+					$next.hide();
+				}
+			});
+		});
 
 })(jQuery);
