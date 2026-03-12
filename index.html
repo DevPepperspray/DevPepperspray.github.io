@@ -62,7 +62,37 @@
 
             <!-- Featured Post -->
             <section class="posts">
-                <!-- Project 0: Housing Performance Analysis -->
+                  <article>
+                    <header>
+                        <span class="date">Project 1</span>
+                        <h2><a href="https://github.com/DevPepperspray/Patient-No-Show-Prediction">Patient No-Show Prediction</a></h2>
+                    </header>
+
+                    <!-- Clickable carousel wrapper (fixed image URLs and carousel controls) -->
+                    <a href="https://github.com/DevPepperspray/Patient-No-Show-Prediction" class="image fit" style="display: block; text-decoration: none; color: inherit;">
+                        <div class="carousel" id="carousel1">
+                            <div class="carousel-images">
+                                <!-- Corrected raw GitHub image URLs -->
+                                <img src="https://github.com/DevPepperspray/Patient-No-Show-Prediction/blob/main/Images/Matrix.png?raw=true" alt="Heat Map Chart">
+                                <img src="https://github.com/DevPepperspray/Patient-No-Show-Prediction/blob/main/Images/compare.png?raw=true" alt="Model Comparison">
+                                <img src="https://github.com/DevPepperspray/Patient-No-Show-Prediction/blob/main/Images/Grid.jpg?raw=true" alt="Exploratory Analysis">
+                                <img src="https://github.com/DevPepperspray/Patient-No-Show-Prediction/blob/main/Images/neighbourhood.png?raw=true" alt="Visualization">
+                            </div>
+                            <!-- Only one prev and one next (duplicates removed) -->
+                            <a class="carousel-prev" onclick="event.preventDefault(); event.stopPropagation(); changeSlide(-1, 'carousel1')">&#10094;</a>
+                            <a class="carousel-next" onclick="event.preventDefault(); event.stopPropagation(); changeSlide(1, 'carousel1')">&#10095;</a>
+                            <!-- Optional dot indicators (will be added via js) -->
+                            <div class="carousel-dots" id="dots-carousel1"></div>
+                        </div>
+                    </a>
+
+                    <p>Analyzed 110K+ medical appointments to predict patient no-shows and provide actionable insights for healthcare providers. Uncovered key drivers: wait times (30+ days → 35% no-show), age (younger patients at higher risk), and socioeconomic factors. Built and compared 5 ML models with 79.6% accuracy. Recommendations could reduce no-shows by 15%, recovering $500K+ annually.</p>
+                    
+                    <!-- Single correct button -->
+                    <ul class="actions special">
+                        <li><a href="https://github.com/DevPepperspray/Patient-No-Show-Prediction" class="button">View Project</a></li>
+                    </ul>
+                </article>                <!-- Project 0: Housing Performance Analysis -->
                 <article>
                     <header>
                         <span class="date">Health Provider Analysis</span>
@@ -238,6 +268,7 @@
 
 
 </html>
+
 
 
 
