@@ -9,21 +9,34 @@
     <style>
         .watermark-dot {
             display: inline-block;
-            width: 6px;
-            height: 6px;
-            background-color: #aaa;
+            width: 10px;
+            height: 10px;
+            background-color: #333;
             border-radius: 50%;
             cursor: pointer;
-            opacity: 0.5;
-            transition: opacity 0.2s;
-            margin-left: 5px;
+            opacity: 0.6;
+            transition: opacity 0.2s, transform 0.1s;
+            margin-left: 8px;
+            vertical-align: middle;
+            box-shadow: 0 0 2px rgba(0,0,0,0.2);
         }
-        .watermark-dot:hover { opacity: 1; }
+        .watermark-dot:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        .footer-watermark {
+            text-align: right;
+            margin-top: 15px;
+            font-size: 0;
+            line-height: 0;
+        }
     </style>
 </head>
 <body class="is-preload">
     <div id="wrapper">
-        <header id="header"><a href="index.html" class="logo">Michael Akinwunmi</a></header>
+        <header id="header">
+            <a href="index.html" class="logo">Michael Akinwunmi</a>
+        </header>
         <nav id="nav">
             <ul class="links">
                 <li><a href="index.html">Data Science Projects</a></li>
@@ -42,88 +55,260 @@
                     <h1>Professional Certifications & Accomplishments</h1>
                     <p>Validating my expertise in data analysis, machine learning, and data science through recognized industry certifications.</p>
                 </header>
+
+                <!-- CERTIFICATIONS SECTION (major credentials) -->
                 <div class="certifications">
                     <h2>🎓 Certifications</h2>
+
+                    <!-- IBM Data Analyst Professional Certificate (full) -->
                     <article class="cert-item">
-                        <header><h2>IBM Data Analyst Professional Certificate</h2><p><strong>IBM via Coursera</strong> | October 2022</p></header>
-                        <p>Covers Excel, SQL, Python, R, and Power BI for data analysis; full data lifecycle from collection to visualization.</p>
+                        <header>
+                            <h2>IBM Data Analyst Professional Certificate</h2>
+                            <p><strong>IBM via Coursera</strong> | Completed November 3, 2022</p>
+                        </header>
+                        <p>Earned after completing 9 courses covering Excel, SQL, Python, R, Power BI, and Cognos Analytics. Mastered the full data lifecycle from collection to visualization, including real‑world capstone project.</p>
+                        <ul>
+                            <li>Introduction to Data Analytics</li>
+                            <li>Excel Basics for Data Analysis</li>
+                            <li>Data Visualization with Excel and Cognos</li>
+                            <li>Python for Data Science, AI & Development</li>
+                            <li>Python Project for Data Science</li>
+                            <li>Databases and SQL for Data Science with Python</li>
+                            <li>Data Analysis with Python</li>
+                            <li>Data Visualization with Python</li>
+                            <li>IBM Data Analyst Capstone Project</li>
+                        </ul>
                     </article>
+
                     <hr />
+
                     <article class="cert-item">
-                        <header><h2>Associate SQL Developer</h2><p><strong>DataCamp</strong> | Completed</p></header>
+                        <header>
+                            <h2>Associate SQL Developer</h2>
+                            <p><strong>DataCamp</strong> | Completed</p>
+                        </header>
                         <p>Advanced SQL skills for data manipulation, querying, and database development.</p>
                     </article>
+
                     <hr />
+
                     <article class="cert-item">
-                        <header><h2>Data Analyst in Python</h2><p><strong>DataCamp</strong> | Completed</p></header>
+                        <header>
+                            <h2>Data Analyst in Python</h2>
+                            <p><strong>DataCamp</strong> | Completed</p>
+                        </header>
                         <p>Comprehensive Python data analysis track covering pandas, data cleaning, and exploratory data analysis.</p>
                     </article>
+
                     <hr />
+
                     <article class="cert-item">
-                        <header><h2>Data Scientist in Python</h2><p><strong>DataCamp</strong> | Completed</p></header>
+                        <header>
+                            <h2>Data Scientist in Python</h2>
+                            <p><strong>DataCamp</strong> | Completed</p>
+                        </header>
                         <p>End‑to‑end data science training including machine learning, statistical modeling, and data storytelling.</p>
                     </article>
+
                     <hr />
+
                     <article class="cert-item">
-                        <header><h2>Professional Certificate: Finance Data Analysis & Analytics</h2><p><strong>Institute of Management, Technology and Finance</strong> | September 2025 - November 2025</p></header>
+                        <header>
+                            <h2>Professional Certificate: Finance Data Analysis & Analytics</h2>
+                            <p><strong>Institute of Management, Technology and Finance</strong> | September 2025 - November 2025</p>
+                        </header>
                         <p>Specialized training in financial data analysis, forecasting, and analytics for business decision‑making.</p>
                     </article>
+
                     <hr />
+
                     <article class="cert-item">
-                        <header><h2>CompTIA A+ Certification</h2><p><strong>New Horizons Computer Learning Centre</strong> | October 2020</p></header>
+                        <header>
+                            <h2>CompTIA A+ Certification</h2>
+                            <p><strong>New Horizons Computer Learning Centre</strong> | October 2020</p>
+                        </header>
                         <p>Fundamental IT certification covering hardware, software, networking, and security basics.</p>
                     </article>
-                    <hr />
-                    <article class="cert-item">
-                        <header><h2>Cyber Security Fundamentals</h2><p><strong>Cisco Networking Academy</strong> | February 2021 - June 2021</p></header>
-                        <p>Cybersecurity basics including threat prevention, network security, and data protection principles.</p>
-                    </article>
-                    <hr />
+
+                    <!-- (Cyber Security Fundamentals removed from here – moved to Accomplishments) -->
                 </div>
+
+                <hr />
+
+                <!-- ACCOMPLISHMENTS SECTION (micro‑credentials, short courses) -->
                 <div class="accomplishments">
                     <h2>🏆 Accomplishments</h2>
-                    <p>Micro‑credentials and specialized skill validations that complement my core data science expertise.</p>
+                    <p>Specialized micro‑credentials and skill validations that complement my core data science expertise.</p>
+
+                    <!-- Web Scraping (existing) -->
                     <article class="accomp-item">
-                        <header><h3>Web Scraping in Python</h3><p><strong>DataCamp</strong> | Completed August 20, 2023 • 4 hours</p></header>
+                        <header>
+                            <h3>Web Scraping in Python</h3>
+                            <p><strong>DataCamp</strong> | Completed August 20, 2023 • 4 hours</p>
+                        </header>
                         <p>Built tools to retrieve, parse, and store information across the internet using Python libraries like Beautiful Soup.</p>
                         <ul><li>Data extraction and parsing techniques</li><li>Automated web data collection</li><li>Structured data storage strategies</li></ul>
                     </article>
+
                     <hr />
+
+                    <!-- Building Database Agent (existing) -->
                     <article class="accomp-item">
-                        <header><h3>Building Your Own Database Agent</h3><p><strong>DeepLearning.AI / Coursera</strong> | Completed</p></header>
+                        <header>
+                            <h3>Building Your Own Database Agent</h3>
+                            <p><strong>DeepLearning.AI / Coursera</strong> | Completed</p>
+                        </header>
                         <p>Developed an AI agent that interacts with databases using natural language, simplifying querying and insight extraction.</p>
                         <ul><li>Natural language database querying</li><li>AI agent development for data access</li><li>Integration with Microsoft Azure OpenAI</li></ul>
                     </article>
+
                     <hr />
+
+                    <!-- SEO Certified (existing) -->
                     <article class="accomp-item">
-                        <header><h3>SEO Certified</h3><p><strong>HubSpot Academy</strong> | Valid Jul 27, 2022 - Aug 26, 2023</p></header>
+                        <header>
+                            <h3>SEO Certified</h3>
+                            <p><strong>HubSpot Academy</strong> | Valid Jul 27, 2022 - Aug 26, 2023</p>
+                        </header>
                         <p>Certified in search engine optimization strategies to improve website visibility and performance.</p>
                         <ul><li>On‑page and off‑page SEO</li><li>Keyword research and analytics</li><li>Technical SEO best practices</li></ul>
                     </article>
+
+                    <hr />
+
+                    <!-- NEW: Email Marketing Certified -->
+                    <article class="accomp-item">
+                        <header>
+                            <h3>Email Marketing Certified</h3>
+                            <p><strong>HubSpot Academy</strong> | Valid Jul 27, 2022 - Aug 25, 2024</p>
+                        </header>
+                        <p>Demonstrated knowledge of building email marketing strategies, segmentation, high‑performing email sends, email design, deliverability, and performance metrics.</p>
+                    </article>
+
+                    <hr />
+
+                    <!-- NEW: Introduction to Cybersecurity (Cisco) -->
+                    <article class="accomp-item">
+                        <header>
+                            <h3>Introduction to Cybersecurity</h3>
+                            <p><strong>Cisco Networking Academy</strong> | Completed June 9, 2021</p>
+                        </header>
+                        <p>Understanding global cyber threats, network vulnerabilities, impact of cyber‑attacks on industries, Cisco’s threat detection approach, and career opportunities in cybersecurity.</p>
+                    </article>
+
+                    <hr />
+
+                    <!-- MOVED FROM CERTIFICATIONS: Cyber Security Fundamentals (Cisco) -->
+                    <article class="accomp-item">
+                        <header>
+                            <h3>Cyber Security Fundamentals</h3>
+                            <p><strong>Cisco Networking Academy</strong> | February 2021 - June 2021</p>
+                        </header>
+                        <p>Cybersecurity basics including threat prevention, network security, and data protection principles.</p>
+                    </article>
+
+                    <hr />
+
+                    <!-- NEW: Python for Data Science, AI & Development (IBM individual course) -->
+                    <article class="accomp-item">
+                        <header>
+                            <h3>Python for Data Science, AI & Development</h3>
+                            <p><strong>IBM via Coursera</strong> | Completed 2022</p>
+                        </header>
+                        <p>Foundational Python course covering data structures, APIs, data collection, and AI development basics. Part of the IBM Data Analyst Professional Certificate.</p>
+                    </article>
+
+                    <hr />
+
+                    <!-- NEW: Databases and SQL for Data Science with Python (IBM) -->
+                    <article class="accomp-item">
+                        <header>
+                            <h3>Databases and SQL for Data Science with Python</h3>
+                            <p><strong>IBM via Coursera</strong> | Completed</p>
+                        </header>
+                        <p>Hands‑on SQL and relational database skills, including joins, subqueries, and accessing databases using Python. Part of the IBM Data Analyst Professional Certificate.</p>
+                    </article>
                 </div>
+
+                <!-- Skills Section (unchanged) -->
                 <div class="skills-section">
                     <h2>Technical Skills</h2>
                     <div class="row">
-                        <div class="col-6 col-12-small"><h3>Programming & Databases</h3><ul><li>Python (Pandas, Beautiful Soup, Scikit‑learn)</li><li>SQL, Google BigQuery</li><li>R Programming</li><li>ETL/ELT Processes</li></ul></div>
-                        <div class="col-6 col-12-small"><h3>Visualization & BI Tools</h3><ul><li>Power BI</li><li>Tableau</li><li>Excel (PivotTables, Dashboards)</li><li>Looker</li></ul></div>
+                        <div class="col-6 col-12-small">
+                            <h3>Programming & Databases</h3>
+                            <ul>
+                                <li>Python (Pandas, Beautiful Soup, Scikit‑learn)</li>
+                                <li>SQL, Google BigQuery</li>
+                                <li>R Programming</li>
+                                <li>ETL/ELT Processes</li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-12-small">
+                            <h3>Visualization & BI Tools</h3>
+                            <ul>
+                                <li>Power BI</li>
+                                <li>Tableau</li>
+                                <li>Excel (PivotTables, Dashboards)</li>
+                                <li>Looker</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col-6 col-12-small"><h3>Analysis & Modeling</h3><ul><li>Statistical Analysis</li><li>Predictive Modeling</li><li>Machine Learning</li><li>Customer Segmentation</li><li>A/B Testing</li><li>SPSS</li></ul></div>
-                        <div class="col-6 col-12-small"><h3>Data Management</h3><ul><li>Data Scraping</li><li>Data Wrangling</li><li>Database Management</li><li>Automated Reporting</li></ul></div>
+                        <div class="col-6 col-12-small">
+                            <h3>Analysis & Modeling</h3>
+                            <ul>
+                                <li>Statistical Analysis</li>
+                                <li>Predictive Modeling</li>
+                                <li>Machine Learning</li>
+                                <li>Customer Segmentation</li>
+                                <li>A/B Testing</li>
+                                <li>SPSS</li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-12-small">
+                            <h3>Data Management</h3>
+                            <ul>
+                                <li>Data Scraping</li>
+                                <li>Data Wrangling</li>
+                                <li>Database Management</li>
+                                <li>Automated Reporting</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
         </div>
+
+        <!-- Footer with watermark dot -->
         <footer id="footer">
-            <section><h3>Ready to Discuss Data Projects?</h3><p>Let's connect and explore how data can solve your business challenges.</p></section>
-            <section class="split contact">
-                <section><h3>Email</h3><p><a href="mailto:michaelakinwunmi76@gmail.com">michaelakinwunmi76@gmail.com</a></p></section>
-                <section><h3>Connect</h3><ul class="icons alt"><li><a href="https://github.com/DevPepperspray" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li><li><a href="https://www.linkedin.com/in/michael-akinwunmi-2aa34a247" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li></ul></section>
+            <section>
+                <h3>Ready to Discuss Data Projects?</h3>
+                <p>Let's connect and explore how data can solve your business challenges.</p>
             </section>
-            <div style="text-align: right; font-size: 0; margin-top: 10px;"><span class="watermark-dot" title="Double-click to see watermark" ondblclick="alert('Built by DevPepperspray')"></span></div>
+            <section class="split contact">
+                <section>
+                    <h3>Email</h3>
+                    <p><a href="mailto:michaelakinwunmi76@gmail.com">michaelakinwunmi76@gmail.com</a></p>
+                </section>
+                <section>
+                    <h3>Connect</h3>
+                    <ul class="icons alt">
+                        <li><a href="https://github.com/DevPepperspray" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/michael-akinwunmi-2aa34a247" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    </ul>
+                </section>
+            </section>
+            <div class="footer-watermark">
+                <span class="watermark-dot" title="Double-click to see watermark" ondblclick="alert('Built by DevPepperspray')"></span>
+            </div>
         </footer>
-        <div id="copyright"><ul><li>&copy; Michael Akinwunmi 2025</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul></div>
+
+        <div id="copyright">
+            <ul><li>&copy; Michael Akinwunmi 2025</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+        </div>
     </div>
+
+    <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
