@@ -8,36 +8,40 @@
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
         body, #wrapper, #main, .post {
-            background-color: #0a0a0a !important;
-            color: #e0e0e0 !important;
+            background-color: #0f0f0f !important;
+            color: #f0f0f0 !important;
         }
         h1, h2, h3 {
             color: #ffd966 !important;
         }
         a, .button, .button.primary {
-            color: #ff4d4d !important;
-            border-color: #ff4d4d !important;
+            color: #ff6666 !important;
+            border-color: #ff6666 !important;
         }
         .button:hover, .button.primary:hover {
-            background: #ff4d4d !important;
-            color: #0a0a0a !important;
+            background: #ff6666 !important;
+            color: #0f0f0f !important;
         }
         hr {
             border-color: #333;
         }
         .alt li, .experience article, .split.contact section {
-            background: #111;
+            background: #1a1a1a;
             padding: 12px;
             border-radius: 8px;
             margin: 10px 0;
+            border: 1px solid #2a2a2a;
+        }
+        .alt li a, .experience article p, .experience article ul li {
+            color: #ddd;
         }
         .watermark-dot {
             background-color: #ffd966;
-            box-shadow: 0 0 2px #ff4d4d;
+            box-shadow: 0 0 2px #ff6666;
         }
         footer, #footer {
-            background: #0a0a0a;
-            border-top: 1px solid #333;
+            background: #0f0f0f;
+            border-top: 1px solid #2a2a2a;
         }
         .watermark-dot {
             display: inline-block;
@@ -51,6 +55,11 @@
             margin-left: 5px;
         }
         .watermark-dot:hover { opacity: 1; }
+        input, textarea {
+            background: #222 !important;
+            border-color: #444 !important;
+            color: #f0f0f0 !important;
+        }
     </style>
 </head>
 <body class="is-preload">
@@ -88,10 +97,10 @@
                         <h2>Send a Message</h2>
                         <form method="post" action="#">
                             <div class="row gtr-uniform">
-                                <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Your Name" style="background:#222; border-color:#444; color:#eee;" /></div>
-                                <div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Your Email" style="background:#222; border-color:#444; color:#eee;" /></div>
-                                <div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" style="background:#222; border-color:#444; color:#eee;" /></div>
-                                <div class="col-12"><textarea name="message" id="message" placeholder="Your Message" rows="6" style="background:#222; border-color:#444; color:#eee;"></textarea></div>
+                                <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Your Name" /></div>
+                                <div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Your Email" /></div>
+                                <div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
+                                <div class="col-12"><textarea name="message" id="message" placeholder="Your Message" rows="6"></textarea></div>
                                 <div class="col-12"><ul class="actions"><li><input type="submit" value="Send Message" class="primary" /></li><li><input type="reset" value="Reset" /></li></ul></div>
                             </div>
                         </form>
