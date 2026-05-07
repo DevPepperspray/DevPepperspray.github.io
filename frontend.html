@@ -98,6 +98,30 @@
             gap: 15px;
             justify-content: center;
         }
+        /* Fix for ALL dark text - organization names, companies, strong tags */
+        strong, b, .company, .organization, .alt li strong, .experience article strong, .job strong, .experience strong {
+            color: #ffaa66 !important;
+        }
+        .job-title, .project-title, h3, h4 {
+            color: #ffd966 !important;
+        }
+        .experience-section p strong, .experience-section ul li {
+            color: #ddd;
+        }
+        .experience-section ul li strong {
+            color: #ffaa66;
+        }
+        .alt li, .experience article, .split.contact section {
+            background: #1a1a1a;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border: 1px solid #2a2a2a;
+            color: #f0f0f0;
+        }
+        .alt li a, .experience article p, .experience article ul li {
+            color: #ddd;
+        }
     </style>
 </head>
 <body class="is-preload">
@@ -127,7 +151,7 @@
                 <div class="experience-section" style="background: #1a1a1a; padding: 25px; border-radius: 12px; margin-bottom: 30px; border-left: 4px solid #ff6666;">
                     <h2 style="margin-top: 0;">💼 Current Role</h2>
                     <h3 style="color: #ffd966; margin-bottom: 5px;">Technical Administrator & Manager</h3>
-                    <p><strong>Beyond Remittance Limited Corporation</strong> (Diaspora Group) | <em>2025 – Present</em></p>
+                    <p><strong style="color: #ffaa66;">Beyond Remittance Limited Corporation</strong> (Diaspora Group) | <em>2025 – Present</em></p>
                     <p>Managing and maintaining websites hosted on Bluehost, including <strong>welcome2america.org</strong> and other diaspora-focused platforms. Responsibilities include:</p>
                     <ul>
                         <li>Full website administration: updates, security, backups, and performance optimization</li>
@@ -162,17 +186,14 @@
                 <h2>Website Management & Development</h2>
                 <p>Live, scrollable previews of websites I manage. Click "Open in New Tab" for full experience.</p>
 
-                <!-- WEBSITE 1: Ipadawale.org (iframe fallback to screenshot) -->
+                <!-- WEBSITE 1: Ipadawale.org (screenshot + button) -->
                 <div class="website-preview">
                     <h3>📌 Ipadawale.org – Full Website Management</h3>
                     <p><strong>Status:</strong> Active | <strong>Role:</strong> Technical Administrator, Optimization & Content Updates</p>
-                    <div id="preview-ipadawale">
-                        <div class="iframe-fallback">
-                            <p>⚠️ Live preview blocked by website security policy.</p>
-                            <img src="images/ipadawale-preview-placeholder.jpg" alt="Ipadawale preview" style="max-width:100%; border-radius:8px; margin: 15px 0; border:1px solid #ff6666;">
-                            <div class="preview-actions">
-                                <a href="https://ipadawale.org" class="button primary" target="_blank" rel="noopener noreferrer">Visit Live Site →</a>
-                            </div>
+                    <div class="iframe-fallback">
+                        <img src="images/ipadawale-screenshot.jpg" alt="Ipadawale.org homepage preview" style="max-width:100%; border-radius:8px; margin: 15px 0; border:1px solid #ff6666;" onerror="this.src='https://placehold.co/800x400/1a1a1a/ff6666?text=Ipadawale.org+-+Screenshot+Coming+Soon'">
+                        <div class="preview-actions">
+                            <a href="https://ipadawale.org" class="button primary" target="_blank" rel="noopener noreferrer">Visit Live Site →</a>
                         </div>
                     </div>
                 </div>
@@ -197,12 +218,6 @@
                 
                 <h2>Design & Development Skills</h2>
                 <div class="row"><div class="col-4"><div style="padding:15px;"><h3>Design Tools</h3><ul><li>Figma</li><li>Canva Pro</li><li>Photoshop</li><li>InDesign</li></ul></div></div><div class="col-4"><div style="padding:15px;"><h3>Frontend</h3><ul><li>HTML/CSS/JS</li><li>React.js</li><li>WordPress</li></ul></div></div><div class="col-4"><div style="padding:15px;"><h3>Other</h3><ul><li>UI/UX</li><li>Typography</li><li>Brand Identity</li></ul></div></div></div>
-                
-                <div class="box" style="background: linear-gradient(135deg, #ff4d4d, #cc0000); color: white; text-align: center; padding: 30px; border-radius: 10px; border: none;">
-                    <h3 style="color: white;">Ready to Elevate Your Brand?</h3>
-                    <p>All projects include +1 free revision.</p>
-                    <ul class="actions"><li><a href="contact.html" class="button primary" style="background: white; color: #cc0000;">Get in Touch</a></li></ul>
-                </div>
             </section>
         </div>
         <footer id="footer">
@@ -220,14 +235,17 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        // Optional: if welcome2america.org iframe fails to load, show fallback
-        document.getElementById('preview-welcome2america').querySelector('iframe').onerror = function() {
-            this.style.display = 'none';
-            const fallback = document.createElement('div');
-            fallback.className = 'iframe-fallback';
-            fallback.innerHTML = '<p>⚠️ Live preview currently unavailable. Click the button below to visit the site.</p><div class="preview-actions"><a href="https://welcome2america.org" class="button primary" target="_blank">Visit Live Site →</a></div>';
-            document.getElementById('preview-welcome2america').appendChild(fallback);
-        };
+        // If welcome2america.org iframe fails to load, show fallback
+        const iframe = document.querySelector('#preview-welcome2america iframe');
+        if (iframe) {
+            iframe.onerror = function() {
+                this.style.display = 'none';
+                const fallback = document.createElement('div');
+                fallback.className = 'iframe-fallback';
+                fallback.innerHTML = '<p>⚠️ Live preview currently unavailable. Click the button below to visit the site.</p><div class="preview-actions"><a href="https://welcome2america.org" class="button primary" target="_blank">Visit Live Site →</a></div>';
+                document.getElementById('preview-welcome2america').appendChild(fallback);
+            };
+        }
     </script>
 </body>
 </html>
