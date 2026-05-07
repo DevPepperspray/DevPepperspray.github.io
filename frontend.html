@@ -4,6 +4,8 @@
     <title>Web Design & Development - Michael Akinwunmi</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Professional web design and frontend development by Michael Akinwunmi." />
+    <meta name="author" content="Michael Akinwunmi (Dev Pepperspray)" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
@@ -64,6 +66,38 @@
             background: #1a1a1a;
             color: #f0f0f0;
         }
+        /* Scrollable iframe preview style */
+        .website-preview {
+            background: #0a0a0a;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 30px 0;
+            border: 1px solid #333;
+        }
+        .website-preview h3 {
+            color: #ffd966;
+            margin-top: 0;
+        }
+        .preview-frame {
+            width: 100%;
+            height: 500px;
+            border: 1px solid #ff6666;
+            border-radius: 8px;
+            background: white;
+        }
+        .iframe-fallback {
+            text-align: center;
+            padding: 40px;
+            background: #1a1a1a;
+            border-radius: 8px;
+            color: #ddd;
+        }
+        .preview-actions {
+            margin-top: 15px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
     </style>
 </head>
 <body class="is-preload">
@@ -88,6 +122,24 @@
                     <h1>Web Design & Frontend Development</h1>
                     <p>Crafting beautiful, functional interfaces that make data accessible and brands shine.<br>All projects include +1 free revision!</p>
                 </header>
+
+                <!-- NEW JOB EXPERIENCE SECTION -->
+                <div class="experience-section" style="background: #1a1a1a; padding: 25px; border-radius: 12px; margin-bottom: 30px; border-left: 4px solid #ff6666;">
+                    <h2 style="margin-top: 0;">💼 Current Role</h2>
+                    <h3 style="color: #ffd966; margin-bottom: 5px;">Technical Administrator & Manager</h3>
+                    <p><strong>Beyond Remittance Limited Corporation</strong> (Diaspora Group) | <em>2025 – Present</em></p>
+                    <p>Managing and maintaining websites hosted on Bluehost, including <strong>welcome2america.org</strong> and other diaspora-focused platforms. Responsibilities include:</p>
+                    <ul>
+                        <li>Full website administration: updates, security, backups, and performance optimization</li>
+                        <li>Technical support and troubleshooting for WordPress and custom HTML/CSS sites</li>
+                        <li>Implementing design improvements and ensuring responsive, mobile-friendly layouts</li>
+                        <li>Managing hosting configurations, domain settings, and email accounts on Bluehost</li>
+                        <li>Collaborating with stakeholders to align web presence with organizational goals</li>
+                    </ul>
+                </div>
+
+                <hr />
+
                 <div class="services-grid" style="padding: 30px; border-radius: 10px;">
                     <h2 style="text-align: center; margin-bottom: 30px;">Design & Development Services</h2>
                     <div class="row">
@@ -96,6 +148,7 @@
                     </div>
                 </div>
                 <hr />
+
                 <h2>Letterhead Design Portfolio</h2>
                 <p>Professionally designed letterheads. Click images to view full size.</p>
                 <div class="row">
@@ -105,20 +158,51 @@
                     <div class="col-3 col-6 col-12-small"><div class="image fit"><a href="images/letterhead4.jpg" target="_blank"><img src="images/letterhead4-placeholder.jpg" alt="Letterhead 4" style="border-radius: 4px; border: 1px solid #555;"></a><p style="text-align: center;">Premium</p></div></div>
                 </div>
                 <hr />
-                <h2>Website Management</h2>
-                <div class="preview-box" style="padding: 20px; border-radius: 12px;">
-                    <h3>Ipadawale.org – Full Website Management</h3>
-                    <p><strong>Current Project:</strong> Ongoing management, optimization, and content updates</p>
-                    <a href="https://ipadawale.org" target="_blank"><img src="https://github.com/DevPepperspray/DevPepperspray.github.io/blob/main/images/website%20image.png?raw=true" alt="Ipadawale preview" style="max-width:100%; border-radius:8px; border:1px solid #ff6666;"></a>
-                    <div class="preview-caption">⬆️ Click image or button below</div>
-                    <ul class="actions"><li><a href="https://ipadawale.org" class="button primary" target="_blank">Visit Live Site →</a></li></ul>
+
+                <h2>Website Management & Development</h2>
+                <p>Live, scrollable previews of websites I manage. Click "Open in New Tab" for full experience.</p>
+
+                <!-- WEBSITE 1: Ipadawale.org (iframe fallback to screenshot) -->
+                <div class="website-preview">
+                    <h3>📌 Ipadawale.org – Full Website Management</h3>
+                    <p><strong>Status:</strong> Active | <strong>Role:</strong> Technical Administrator, Optimization & Content Updates</p>
+                    <div id="preview-ipadawale">
+                        <div class="iframe-fallback">
+                            <p>⚠️ Live preview blocked by website security policy.</p>
+                            <img src="images/ipadawale-preview-placeholder.jpg" alt="Ipadawale preview" style="max-width:100%; border-radius:8px; margin: 15px 0; border:1px solid #ff6666;">
+                            <div class="preview-actions">
+                                <a href="https://ipadawale.org" class="button primary" target="_blank" rel="noopener noreferrer">Visit Live Site →</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- WEBSITE 2: welcome2america.org (iframe live preview) -->
+                <div class="website-preview">
+                    <h3>🇺🇸 Welcome2America.org – Full Website Management</h3>
+                    <p><strong>Status:</strong> Active | <strong>Role:</strong> Technical Administrator, Design & Hosting (Bluehost)</p>
+                    <div id="preview-welcome2america">
+                        <iframe class="preview-frame" src="https://welcome2america.org" title="Welcome2America.org live preview" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-modals"></iframe>
+                        <div class="preview-actions">
+                            <a href="https://welcome2america.org" class="button primary" target="_blank" rel="noopener noreferrer">Open in New Tab →</a>
+                        </div>
+                        <p style="font-size: 12px; text-align: center; margin-top: 10px;">⬆️ Scroll inside the window above to explore the live site.</p>
+                    </div>
+                </div>
+
                 <hr />
+
                 <h2>Design Training & Certifications</h2>
-                <div class="row"><div class="col-6"><div style="padding:20px; border-radius:8px;"><h3>Figma Mastery</h3><p>UI/UX training on Udemy<br>Wireframing, prototyping.</p></div></div><div class="col-6"><div style="padding:20px; border-radius:8px;"><h3>Canva Expert</h3><p>Advanced Canva training<br>Brand kits, social graphics.</p></div></div></div>
+                <div class="row"><div class="col-6"><div style="padding:20px; border-radius:8px;"><h3>Figma Mastery</h3><p>UI/UX training on Udemy – wireframing, prototyping.</p></div></div><div class="col-6"><div style="padding:20px; border-radius:8px;"><h3>Canva Expert</h3><p>Advanced Canva training – brand kits, social graphics.</p></div></div></div>
+                
                 <h2>Design & Development Skills</h2>
                 <div class="row"><div class="col-4"><div style="padding:15px;"><h3>Design Tools</h3><ul><li>Figma</li><li>Canva Pro</li><li>Photoshop</li><li>InDesign</li></ul></div></div><div class="col-4"><div style="padding:15px;"><h3>Frontend</h3><ul><li>HTML/CSS/JS</li><li>React.js</li><li>WordPress</li></ul></div></div><div class="col-4"><div style="padding:15px;"><h3>Other</h3><ul><li>UI/UX</li><li>Typography</li><li>Brand Identity</li></ul></div></div></div>
                 
+                <div class="box" style="background: linear-gradient(135deg, #ff4d4d, #cc0000); color: white; text-align: center; padding: 30px; border-radius: 10px; border: none;">
+                    <h3 style="color: white;">Ready to Elevate Your Brand?</h3>
+                    <p>All projects include +1 free revision.</p>
+                    <ul class="actions"><li><a href="contact.html" class="button primary" style="background: white; color: #cc0000;">Get in Touch</a></li></ul>
+                </div>
             </section>
         </div>
         <footer id="footer">
@@ -135,5 +219,15 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        // Optional: if welcome2america.org iframe fails to load, show fallback
+        document.getElementById('preview-welcome2america').querySelector('iframe').onerror = function() {
+            this.style.display = 'none';
+            const fallback = document.createElement('div');
+            fallback.className = 'iframe-fallback';
+            fallback.innerHTML = '<p>⚠️ Live preview currently unavailable. Click the button below to visit the site.</p><div class="preview-actions"><a href="https://welcome2america.org" class="button primary" target="_blank">Visit Live Site →</a></div>';
+            document.getElementById('preview-welcome2america').appendChild(fallback);
+        };
+    </script>
 </body>
 </html>
