@@ -1,156 +1,211 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Certifications - Michael Akinwunmi</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certifications · Michael Akinwunmi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/scrollreveal"></script>
     <style>
-        body, #wrapper, #main, .post {
-            background-color: #0f0f0f !important;
-            color: #f0f0f0 !important;
-        }
-        h1, h2, h3, .major h1, .major h2, .cert-item h2, .accomp-item h3 {
-            color: #ffd966 !important;
-        }
-        .cert-item p strong, .accomp-item p strong, .cert-item p, .accomp-item p {
-            color: #ddd !important;
-        }
-        /* Make organization names and dates pop */
-        .cert-item header p, .accomp-item header p {
-            color: #ffaa66 !important;
-        }
-        a, .button, .button.primary {
-            color: #ff6666 !important;
-            border-color: #ff6666 !important;
-        }
-        .button:hover, .button.primary:hover {
-            background: #ff6666 !important;
-            color: #0f0f0f !important;
-        }
-        hr {
-            border-color: #333;
-        }
-        .cert-item, .accomp-item {
-            background: #1a1a1a;
-            padding: 20px;
-            border-radius: 12px;
-            margin: 20px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-        }
-        .skills-section div {
-            background: #1a1a1a !important;
-            border: 1px solid #333;
-            color: #eee;
-        }
-        .watermark-dot {
-            background-color: #ffd966;
-            box-shadow: 0 0 2px #ff6666;
-        }
-        footer, #footer {
-            background: #0f0f0f;
-            border-top: 1px solid #2a2a2a;
-        }
-        .footer-watermark span {
-            background-color: #ffd966 !important;
-        }
-        .watermark-dot {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            background-color: #ffd966;
-            border-radius: 50%;
-            cursor: pointer;
-            opacity: 0.7;
-            transition: opacity 0.2s;
-            margin-left: 8px;
-            vertical-align: middle;
-            box-shadow: 0 0 2px #ff6666;
-        }
-        .watermark-dot:hover { opacity: 1; transform: scale(1.1); }
-        .footer-watermark {
-            text-align: right;
-            margin-top: 15px;
-            font-size: 0;
-            line-height: 0;
-        }
-        ul li {
-            color: #ddd;
-        }
+        /* Same base styles as index */
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: 'Inter', sans-serif; background:#0b0b0e; color:#f0f0f5; overflow-x:hidden; }
+        .glass { background:rgba(255,255,255,0.04); backdrop-filter:blur(14px); border:1px solid rgba(255,255,255,0.06); }
+        .glass-card { background:rgba(255,255,255,0.04); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.06); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .glass-card:hover { transform:translateY(-6px); box-shadow:0 20px 40px -12px rgba(168,85,247,0.25); border-color:rgba(168,85,247,0.25); }
+        .gradient-text { background:linear-gradient(135deg,#c084fc,#a855f7,#8b5cf6); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+        .glow-blob { position:absolute; border-radius:50%; filter:blur(80px); pointer-events:none; opacity:0.30; z-index:0; }
+        .nav-link { position:relative; font-weight:500; color:#cbd5e1; transition:color 0.25s; }
+        .nav-link::after { content:''; position:absolute; left:0; bottom:-3px; width:0; height:2px; background:linear-gradient(90deg,#a855f7,#8b5cf6); transition:width 0.3s; }
+        .nav-link:hover { color:#f0f0f5; }
+        .nav-link:hover::after { width:100%; }
+        .nav-link.active { color:#f0f0f5; }
+        .nav-link.active::after { width:100%; }
+        .mobile-menu { transition:transform 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.35s; transform:translateX(100%); opacity:0; pointer-events:none; }
+        .mobile-menu.open { transform:translateX(0); opacity:1; pointer-events:auto; }
+        .hamburger span { transition:all 0.3s; }
+        .hamburger.active span:nth-child(1){ transform:rotate(45deg) translate(5px,5px); }
+        .hamburger.active span:nth-child(2){ opacity:0; }
+        .hamburger.active span:nth-child(3){ transform:rotate(-45deg) translate(5px,-5px); }
+        .tag { display:inline-block; padding:0.25rem 0.9rem; border-radius:9999px; font-size:0.7rem; font-weight:600; text-transform:uppercase; background:rgba(168,85,247,0.15); color:#c084fc; border:1px solid rgba(168,85,247,0.15); }
+        .tag-amber { background:rgba(245,158,11,0.12); color:#fbbf24; border-color:rgba(245,158,11,0.12); }
+        .input-dark { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:#f0f0f5; transition:border-color 0.25s, box-shadow 0.25s; }
+        .input-dark:focus { outline:none; border-color:#8b5cf6; box-shadow:0 0 0 4px rgba(139,92,246,0.15); }
+        .input-dark::placeholder { color:#6b7280; }
+        [data-sr] { visibility:hidden; }
+        .cert-icon { width:2.5rem; height:2.5rem; border-radius:0.75rem; display:flex; align-items:center; justify-content:center; font-size:1.25rem; flex-shrink:0; }
     </style>
 </head>
-<body class="is-preload">
-    <div id="wrapper">
-        <header id="header"><a href="index.html" class="logo">Michael Akinwunmi</a></header>
-        <nav id="nav">
-            <ul class="links">
-                <li><a href="index.html">Data Science Projects</a></li>
-                <li class="active"><a href="certifications.html">Certifications</a></li>
-                <li><a href="frontend.html">Web Design</a></li>
-                <li><a href="contact.html">Contact + Resume</a></li>
-            </ul>
-            <ul class="icons">
-                <li><a href="https://www.linkedin.com/in/michael-akinwunmi-2aa34a247" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                <li><a href="https://github.com/DevPepperspray" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-            </ul>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<header class="fixed top-0 left-0 w-full z-50 bg-[#0b0b0e]/80 backdrop-blur-xl border-b border-white/5" id="navbar">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 flex items-center justify-between h-16 lg:h-20">
+        <a href="index.html" class="flex items-center gap-2.5 shrink-0">
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center text-white font-bold text-base shadow-lg shadow-purple-500/25">MA</div>
+            <span class="text-lg font-bold tracking-tight text-white">Michael<span class="text-purple-400">.</span></span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+            <a href="index.html" class="nav-link text-sm">Projects</a>
+            <a href="frontend.html" class="nav-link text-sm">Web Design</a>
+            <a href="certifications.html" class="nav-link active text-sm">Certifications</a>
+            <a href="contact.html" class="nav-link text-sm">Contact</a>
         </nav>
-        <div id="main">
-            <section class="post">
-                <header class="major">
-                    <h1>Professional Certifications & Accomplishments</h1>
-                    <p>Validating my expertise in data analysis, machine learning, and data science through recognized industry certifications.</p>
-                </header>
-                <div class="certifications">
-                    <h2>Certifications</h2>
-                    <article class="cert-item">
-                        <header><h2>IBM Data Analyst Professional Certificate</h2><p><strong>IBM via Coursera</strong> | Completed November 3, 2022</p></header>
-                        <p>Earned after completing 9 courses covering Excel, SQL, Python, R, Power BI, and Cognos Analytics.</p>
-                        <ul><li>Introduction to Data Analytics</li><li>Excel Basics for Data Analysis</li><li>Data Visualization with Excel and Cognos</li><li>Python for Data Science, AI & Development</li><li>Python Project for Data Science</li><li>Databases and SQL for Data Science with Python</li><li>Data Analysis with Python</li><li>Data Visualization with Python</li><li>IBM Data Analyst Capstone Project</li></ul>
-                    </article>
-                    <article class="cert-item">
-                        <header><h2>Professional Certificate: Finance Data Analysis & Analytics</h2><p><strong>Institute of Management, Technology and Finance</strong> | September 2025 - November 2025</p></header>
-                        <p>Specialized training in financial data analysis, forecasting, and analytics for business decision‑making.</p>
-                    </article>
-                    <article class="cert-item">
-                        <header><h2>CompTIA A+ Certification</h2><p><strong>New Horizons Computer Learning Centre</strong> | October 2020</p></header>
-                        <p>Fundamental IT certification covering hardware, software, networking, and security.</p>
-                    </article>
-                   
-                </div>
-                <hr />
-                <div class="accomplishments">
-                    <h2>Accomplishments</h2>
-                    <p>Specialized micro‑credentials and skill validations that complement my core data science expertise.</p>
-                    <article class="accomp-item"><h3>Web Scraping in Python</h3><p><strong>DataCamp</strong> | Completed August 20, 2023 • 4 hours</p><p>Built tools to retrieve, parse, and store information across the internet using Python libraries like Beautiful Soup.</p></article>
-                    <article class="accomp-item"><h3>Building Your Own Database Agent</h3><p><strong>DeepLearning.AI / Coursera</strong> | Completed</p><p>Developed an AI agent that interacts with databases using natural language.</p></article>
-                    <article class="accomp-item"><h3>SEO Certified</h3><p><strong>HubSpot Academy</strong> | Valid Jul 27, 2022 - Aug 26, 2023</p><p>Certified in search engine optimization strategies.</p></article>
-                    <article class="accomp-item"><h3>Email Marketing Certified</h3><p><strong>HubSpot Academy</strong> | Valid Jul 27, 2022 - Aug 25, 2024</p><p>Demonstrated knowledge of building email marketing strategies.</p></article>
-                    <article class="accomp-item"><h3>Cyber Security Fundamentals</h3><p><strong>Cisco Networking Academy</strong> | February 2021 - June 2021</p><p>Cybersecurity basics including threat prevention, network security.</p></article>
-                    <article class="accomp-item"><h3>Intermediate Python</h3><p><strong>DataCamp</strong> | Completed April 7, 2026</p><p>Advanced Python techniques, including loops, functions, and data manipulation with pandas.</p></article>
-                    <article class="accomp-item"><h3>Intermediate SQL</h3><p><strong>DataCamp</strong> | Completed May 1, 2026</p><p>Advanced SQL techniques including Window Functions, CTEs (Common Table Expressions), and complex data transformations with relational joins.</p></article>
-                
-                </div>
-                <div class="skills-section">
-                    <h2>Technical Skills</h2>
-                    <div class="row"><div class="col-6 col-12-small"><h3>Programming & Databases</h3><ul><li>Python (Pandas, Beautiful Soup, Scikit‑learn)</li><li>SQL, Google BigQuery</li><li>R Programming</li><li>ETL/ELT Processes</li></ul></div><div class="col-6 col-12-small"><h3>Visualization & BI Tools</h3><ul><li>Power BI</li><li>Tableau</li><li>Excel (PivotTables, Dashboards)</li><li>Looker</li></ul></div></div>
-                    <div class="row"><div class="col-6 col-12-small"><h3>Analysis & Modeling</h3><ul><li>Statistical Analysis</li><li>Predictive Modeling</li><li>Machine Learning</li><li>Customer Segmentation</li><li>A/B Testing</li><li>SPSS</li></ul></div><div class="col-6 col-12-small"><h3>Data Management</h3><ul><li>Data Scraping</li><li>Data Wrangling</li><li>Database Management</li><li>Automated Reporting</li></ul></div></div>
-                </div>
-            </section>
+        <div class="hidden md:block">
+            <a href="contact.html" class="text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 transition px-5 py-2.5 rounded-xl shadow-lg shadow-purple-500/20">
+                <i class="fa-regular fa-paper-plane mr-2"></i> Let's Talk
+            </a>
         </div>
-        <footer id="footer">
-            <section><h3>Ready to Discuss Data Projects?</h3><p>Let's connect and explore how data can solve your business challenges.</p></section>
-            <section class="split contact"><section><h3>Email</h3><p><a href="mailto:michaelakinwunmi76@gmail.com">michaelakinwunmi76@gmail.com</a></p></section><section><h3>Connect</h3><ul class="icons alt"><li><a href="https://github.com/DevPepperspray" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li><li><a href="https://www.linkedin.com/in/michael-akinwunmi-2aa34a247" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li></ul></section></section>
-            <div class="footer-watermark"><span class="watermark-dot" title="Double-click to see watermark" ondblclick="alert('Built by DevPepperspray')"></span></div>
-        </footer>
-        <div id="copyright"><ul><li>&copy; Michael Akinwunmi 2025</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul></div>
+        <button class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 hamburger relative z-50" id="menuToggle">
+            <span class="block w-6 h-0.5 bg-gray-300 rounded-full transition-all"></span>
+            <span class="block w-6 h-0.5 bg-gray-300 rounded-full transition-all"></span>
+            <span class="block w-6 h-0.5 bg-gray-300 rounded-full transition-all"></span>
+        </button>
+        <div class="mobile-menu fixed inset-0 top-0 z-40 bg-[#0b0b0e]/95 backdrop-blur-xl md:hidden flex flex-col items-center justify-center gap-8 text-center" id="mobileMenu">
+            <a href="index.html" class="text-xl font-medium text-white hover:text-purple-400 transition">Projects</a>
+            <a href="frontend.html" class="text-xl font-medium text-white hover:text-purple-400 transition">Web Design</a>
+            <a href="certifications.html" class="text-xl font-medium text-white hover:text-purple-400 transition">Certifications</a>
+            <a href="contact.html" class="text-xl font-medium text-white hover:text-purple-400 transition">Contact</a>
+            <a href="contact.html" class="text-base font-medium text-white bg-gradient-to-r from-purple-600 to-indigo-600 px-8 py-3.5 rounded-xl shadow-lg shadow-purple-500/20 mt-4">
+                <i class="fa-regular fa-paper-plane mr-2"></i> Let's Talk
+            </a>
+        </div>
     </div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="relative min-h-[50vh] flex items-center pt-24 lg:pt-28 overflow-hidden bg-[#0b0b0e]">
+    <div class="glow-blob w-96 h-96 bg-indigo-500/10 -top-40 -left-40"></div>
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 w-full relative z-10">
+        <div class="text-center" data-sr="enter bottom, wait 0.1s">
+            <span class="tag">Credentials</span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-white mt-4">
+                Certifications &amp; <span class="gradient-text">Accomplishments</span>
+            </h1>
+            <p class="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto mt-4 leading-relaxed">
+                Validated expertise in data analysis, machine learning, and data science
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CERTIFICATIONS LIST ===== -->
+<section class="relative py-16 md:py-20 bg-[#0f0f14] border-t border-white/5">
+    <div class="max-w-4xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="space-y-6" data-sr="enter bottom, wait 0.1s">
+            <!-- IBM -->
+            <div class="glass-card rounded-2xl p-6 flex items-start gap-4">
+                <div class="cert-icon bg-purple-500/15 text-purple-400"><i class="fa-solid fa-certificate"></i></div>
+                <div>
+                    <h4 class="text-white font-bold">IBM Data Analyst Professional</h4>
+                    <p class="text-amber-400 text-sm font-medium">IBM via Coursera · Nov 2022</p>
+                    <p class="text-gray-400 text-sm mt-1 leading-relaxed">9 courses: Excel, SQL, Python, R, Power BI, Cognos Analytics.</p>
+                </div>
+            </div>
+            <!-- Finance -->
+            <div class="glass-card rounded-2xl p-6 flex items-start gap-4">
+                <div class="cert-icon bg-emerald-500/15 text-emerald-400"><i class="fa-solid fa-chart-line"></i></div>
+                <div>
+                    <h4 class="text-white font-bold">Finance Data Analysis &amp; Analytics</h4>
+                    <p class="text-amber-400 text-sm font-medium">Institute of Management, Technology and Finance · 2025</p>
+                    <p class="text-gray-400 text-sm mt-1 leading-relaxed">Financial forecasting, analytics for business decision‑making.</p>
+                </div>
+            </div>
+            <!-- CompTIA -->
+            <div class="glass-card rounded-2xl p-6 flex items-start gap-4">
+                <div class="cert-icon bg-blue-500/15 text-blue-400"><i class="fa-solid fa-shield-halved"></i></div>
+                <div>
+                    <h4 class="text-white font-bold">CompTIA A+ Certification</h4>
+                    <p class="text-amber-400 text-sm font-medium">New Horizons · Oct 2020</p>
+                    <p class="text-gray-400 text-sm mt-1 leading-relaxed">Hardware, software, networking, and security fundamentals.</p>
+                </div>
+            </div>
+            <!-- More micro-credentials -->
+            <div class="glass-card rounded-2xl p-6 flex items-start gap-4">
+                <div class="cert-icon bg-rose-500/15 text-rose-400"><i class="fa-solid fa-award"></i></div>
+                <div>
+                    <h4 class="text-white font-bold">10+ Micro-Credentials</h4>
+                    <p class="text-amber-400 text-sm font-medium">DataCamp · HubSpot · Cisco</p>
+                    <p class="text-gray-400 text-sm mt-1 leading-relaxed">Web Scraping, SEO, Email Marketing, Cybersecurity, Intermediate Python &amp; SQL.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section class="relative py-16 md:py-20 bg-[#0b0b0e] border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="text-center max-w-2xl mx-auto mb-12" data-sr="enter bottom, wait 0.1s">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white">Technical Skills</h2>
+            <div class="w-16 h-1 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full mx-auto mt-4"></div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4" data-sr="enter bottom, wait 0.1s">
+            <div class="glass-card rounded-xl p-4 text-center">
+                <span class="text-purple-400 text-2xl block mb-1"><i class="fa-brands fa-python"></i></span>
+                <span class="text-white text-sm font-medium">Python</span>
+                <span class="text-gray-500 text-xs block">Pandas, Scikit-learn</span>
+            </div>
+            <div class="glass-card rounded-xl p-4 text-center">
+                <span class="text-blue-400 text-2xl block mb-1"><i class="fa-solid fa-database"></i></span>
+                <span class="text-white text-sm font-medium">SQL</span>
+                <span class="text-gray-500 text-xs block">BigQuery, PostgreSQL</span>
+            </div>
+            <div class="glass-card rounded-xl p-4 text-center">
+                <span class="text-amber-400 text-2xl block mb-1"><i class="fa-solid fa-chart-pie"></i></span>
+                <span class="text-white text-sm font-medium">Power BI</span>
+                <span class="text-gray-500 text-xs block">DAX, Dashboards</span>
+            </div>
+            <div class="glass-card rounded-xl p-4 text-center">
+                <span class="text-rose-400 text-2xl block mb-1"><i class="fa-brands fa-figma"></i></span>
+                <span class="text-white text-sm font-medium">Figma</span>
+                <span class="text-gray-500 text-xs block">UI/UX, Prototyping</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="border-t border-white/5 bg-[#0b0b0e] py-8">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+        <p>&copy; 2025 <span class="text-white font-medium">Michael Akinwunmi</span>. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+            <a href="#" class="hover:text-white transition">Privacy</a>
+            <a href="#" class="hover:text-white transition">Terms</a>
+            <span class="text-gray-600">·</span>
+            <span class="text-xs">Built with <i class="fa-solid fa-heart text-rose-400"></i> by DevPepperspray</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.getElementById('menuToggle');
+        const mobile = document.getElementById('mobileMenu');
+        toggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mobile.classList.toggle('open');
+            document.body.classList.toggle('overflow-hidden');
+        });
+        mobile.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                toggle.classList.remove('active');
+                mobile.classList.remove('open');
+                document.body.classList.remove('overflow-hidden');
+            });
+        });
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('shadow-lg', window.scrollY > 20);
+            navbar.classList.toggle('shadow-black/20', window.scrollY > 20);
+        });
+        if (typeof ScrollReveal !== 'undefined') {
+            const sr = ScrollReveal({ distance: '40px', duration: 800, easing: 'ease-out-cubic', opacity: 0, scale: 0.96, reset: false, mobile: true });
+            sr.reveal('[data-sr]', { interval: 80 });
+        }
+    });
+</script>
 </body>
 </html>
