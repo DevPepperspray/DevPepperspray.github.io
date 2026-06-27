@@ -1,178 +1,210 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Contact + Resume - Michael Akinwunmi</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact · Michael Akinwunmi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/scrollreveal"></script>
     <style>
-        body, #wrapper, #main, .post {
-            background-color: #0f0f0f !important;
-            color: #f0f0f0 !important;
-        }
-        h1, h2, h3 {
-            color: #ffd966 !important;
-        }
-        a, .button, .button.primary {
-            color: #ff6666 !important;
-            border-color: #ff6666 !important;
-        }
-        .button:hover, .button.primary:hover {
-            background: #ff6666 !important;
-            color: #0f0f0f !important;
-        }
-        hr {
-            border-color: #333;
-        }
-        .alt li, .experience article, .split.contact section {
-            background: #1a1a1a;
-            padding: 12px;
-            border-radius: 8px;
-            margin: 10px 0;
-            border: 1px solid #2a2a2a;
-            color: #f0f0f0;
-        }
-        .alt li a, .experience article p, .experience article ul li {
-            color: #ddd;
-        }
-        /* Fix for organization names and any strong text inside lists */
-        .alt li strong, .experience article strong, .alt li b, .experience article b {
-            color: #ffd966 !important;
-        }
-        .watermark-dot {
-            background-color: #ffd966;
-            box-shadow: 0 0 2px #ff6666;
-        }
-        footer, #footer {
-            background: #0f0f0f;
-            border-top: 1px solid #2a2a2a;
-        }
-        .watermark-dot {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            background-color: #ffd966;
-            border-radius: 50%;
-            cursor: pointer;
-            opacity: 0.7;
-            transition: opacity 0.2s;
-            margin-left: 5px;
-        }
-        .watermark-dot:hover { opacity: 1; }
-        
-        /* Form inputs - placeholder text color fix */
-        input, textarea {
-            background: #222 !important;
-            border-color: #444 !important;
-            color: #f0f0f0 !important;
-        }
-        input::placeholder, textarea::placeholder {
-            color: #aaa !important;
-            opacity: 1;
-        }
-        input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-            color: #aaa !important;
-        }
-        input::-ms-input-placeholder, textarea::-ms-input-placeholder {
-            color: #aaa !important;
-        }
-        /* Also ensure labels (if any) are visible */
-        label, .form-label, .gtr-uniform label {
-            color: #ffd966 !important;
-        }
+        /* Same base */
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: 'Inter', sans-serif; background:#0b0b0e; color:#f0f0f5; overflow-x:hidden; }
+        .glass { background:rgba(255,255,255,0.04); backdrop-filter:blur(14px); border:1px solid rgba(255,255,255,0.06); }
+        .glass-card { background:rgba(255,255,255,0.04); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.06); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .glass-card:hover { transform:translateY(-6px); box-shadow:0 20px 40px -12px rgba(168,85,247,0.25); border-color:rgba(168,85,247,0.25); }
+        .gradient-text { background:linear-gradient(135deg,#c084fc,#a855f7,#8b5cf6); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+        .glow-blob { position:absolute; border-radius:50%; filter:blur(80px); pointer-events:none; opacity:0.30; z-index:0; }
+        .nav-link { position:relative; font-weight:500; color:#cbd5e1; transition:color 0.25s; }
+        .nav-link::after { content:''; position:absolute; left:0; bottom:-3px; width:0; height:2px; background:linear-gradient(90deg,#a855f7,#8b5cf6); transition:width 0.3s; }
+        .nav-link:hover { color:#f0f0f5; }
+        .nav-link:hover::after { width:100%; }
+        .nav-link.active { color:#f0f0f5; }
+        .nav-link.active::after { width:100%; }
+        .mobile-menu { transition:transform 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.35s; transform:translateX(100%); opacity:0; pointer-events:none; }
+        .mobile-menu.open { transform:translateX(0); opacity:1; pointer-events:auto; }
+        .hamburger span { transition:all 0.3s; }
+        .hamburger.active span:nth-child(1){ transform:rotate(45deg) translate(5px,5px); }
+        .hamburger.active span:nth-child(2){ opacity:0; }
+        .hamburger.active span:nth-child(3){ transform:rotate(-45deg) translate(5px,-5px); }
+        .tag { display:inline-block; padding:0.25rem 0.9rem; border-radius:9999px; font-size:0.7rem; font-weight:600; text-transform:uppercase; background:rgba(168,85,247,0.15); color:#c084fc; border:1px solid rgba(168,85,247,0.15); }
+        .input-dark { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:#f0f0f5; transition:border-color 0.25s, box-shadow 0.25s; }
+        .input-dark:focus { outline:none; border-color:#8b5cf6; box-shadow:0 0 0 4px rgba(139,92,246,0.15); }
+        .input-dark::placeholder { color:#6b7280; }
+        [data-sr] { visibility:hidden; }
+        .contact-icon { width:2.5rem; height:2.5rem; border-radius:0.75rem; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0; }
     </style>
 </head>
-<body class="is-preload">
-    <div id="wrapper">
-        <header id="header"><a href="index.html" class="logo">Contact & Resume</a></header>
-        <nav id="nav">
-            <ul class="links">
-                <li><a href="index.html">Data Science Projects</a></li>
-                <li><a href="certifications.html">Certifications</a></li>
-                <li><a href="frontend.html">Web Design</a></li>
-                <li class="active"><a href="contact.html">Contact + Resume</a></li>
-            </ul>
-            <ul class="icons">
-                <li><a href="https://www.linkedin.com/in/michael-akinwunmi-2aa34a247" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                <li><a href="https://github.com/DevPepperspray" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-            </ul>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<header class="fixed top-0 left-0 w-full z-50 bg-[#0b0b0e]/80 backdrop-blur-xl border-b border-white/5" id="navbar">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 flex items-center justify-between h-16 lg:h-20">
+        <a href="index.html" class="flex items-center gap-2.5 shrink-0">
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center text-white font-bold text-base shadow-lg shadow-purple-500/25">MA</div>
+            <span class="text-lg font-bold tracking-tight text-white">Michael<span class="text-purple-400">.</span></span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+            <a href="index.html" class="nav-link text-sm">Projects</a>
+            <a href="frontend.html" class="nav-link text-sm">Web Design</a>
+            <a href="certifications.html" class="nav-link text-sm">Certifications</a>
+            <a href="contact.html" class="nav-link active text-sm">Contact</a>
         </nav>
-        <div id="main">
-            <section class="post">
-                <header class="major"><h1>Get In Touch</h1><p>Looking for a data analyst who can transform raw data into actionable insights?<br />Let's discuss how I can contribute to your team or project.</p></header>
-                <div class="row">
-                    <div class="col-6 col-12-small">
-                        <h2>Contact Information</h2>
-                        <ul class="alt">
-                            <li><strong>Email:</strong> <a href="mailto:michaelakinwunmi76@gmail.com">michaelakinwunmi76@gmail.com</a></li>
-                            <li><strong>Phone:</strong> +234-7054988472</li>
-                            <li><strong>Location:</strong> Lagos / Ibadan, Nigeria</li>
-                            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/michael-akinwunmi-2aa34a247">linkedin.com/in/michael-akinwunmi</a></li>
-                            <li><strong>GitHub:</strong> <a href="https://github.com/DevPepperspray">github.com/DevPepperspray</a></li>
-                        </ul>
-                        <h2>Download Resume</h2>
-                        <ul class="actions"><li><a href="Michael Akinwunmi.pdf" class="button primary icon solid fa-download">Download PDF Resume</a></li></ul>
-                    </div>
-                    <div class="col-6 col-12-small">
-                        <h2>Send a Message</h2>
-                        <form method="post" action="#">
-                            <div class="row gtr-uniform">
-                                <div class="col-6 col-12-xsmall">
-                                    <input type="text" name="name" id="name" placeholder="Your Name" />
-                                </div>
-                                <div class="col-6 col-12-xsmall">
-                                    <input type="email" name="email" id="email" placeholder="Your Email" />
-                                </div>
-                                <div class="col-12">
-                                    <input type="text" name="subject" id="subject" placeholder="Subject" />
-                                </div>
-                                <div class="col-12">
-                                    <textarea name="message" id="message" placeholder="Your Message" rows="6"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <ul class="actions">
-                                        <li><input type="submit" value="Send Message" class="primary" /></li>
-                                        <li><input type="reset" value="Reset" /></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <hr />
-                <h2>About Me</h2>
-                <p><span class="image left"><img src="images/profile.jpg" alt="Michael Akinwunmi" /></span>Data Analyst with 3+ years of experience developing data-driven solutions that enhance operational efficiency and profitability. Reduced reporting time by 40% through automation and improved marketing ROI by 22% via A/B test analysis. Proficient in SQL, Python, Power BI, and statistical modeling.</p>
-                <p>I specialize in the full data lifecycle—from collection and cleaning to advanced analysis and visualization. My background spans multiple industries, including healthcare, real estate, and finance, where I've developed predictive models, automated reporting systems, and interactive dashboards that drive strategic decision-making.</p>
-                <h2>Professional Experience</h2>
-                <div class="experience">
-                    <article><h3>DSN - Data Science Nigeria</h3><p><strong>Data Analyst Intern</strong> | August 2023 - October 2023 | Lagos, Nigeria</p><ul><li>Engineered Python scripts to automate data collection and presentation prep, reducing manual reporting time by 40%</li><li>Developed and implemented a stock price prediction model using historical data</li><li>Built a web scraping pipeline with Beautiful Soup to extract data from multiple sources</li><li>Created interactive dashboards and reports in Power BI for real-time campaign adjustments</li></ul></article>
-                    <article><h3>EduCare</h3><p><strong>Front-End Developer & Analyst</strong> | April 2021 - January 2022 | Lagos, Nigeria</p><ul><li>Acted as primary client contact, translating business requirements into technical specifications</li><li>Designed reusable HTML/CSS templates, reducing design workload by 60%</li><li>Utilized SQL to query backend databases for content and user data</li><li>Built basic predictive models for user engagement forecasting</li></ul></article>
-                </div>
-                <h2>Education</h2>
-                <ul class="alt">
-                    <li><strong>B.Sc. Estate Management</strong> - University of Ibadan, Nigeria (Expected 2026)</li>
-                    <li><strong>Data Analytics</strong> - IBM (Completed 2022)</li>
-                    <li><strong>Data Science Program</strong> - Learnify Academy (Completed: Nov 2025)</li>
-                    <li><strong>CompTIA A+ Certification</strong> - New Horizons Computer Learning Centre (Oct 2020)</li>
-                </ul>
-            </section>
+        <div class="hidden md:block">
+            <a href="contact.html" class="text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 transition px-5 py-2.5 rounded-xl shadow-lg shadow-purple-500/20">
+                <i class="fa-regular fa-paper-plane mr-2"></i> Let's Talk
+            </a>
         </div>
-        <footer id="footer">
-            <section class="split contact">
-                <section><h3>Direct Contact</h3><p><a href="mailto:michaelakinwunmi76@gmail.com">michaelakinwunmi76@gmail.com</a><br />+234-7054988472</p></section>
-                <section><h3>Connect Online</h3><ul class="icons alt"><li><a href="https://www.linkedin.com/in/michael-akinwunmi-2aa34a247" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li><li><a href="https://github.com/DevPepperspray" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li></ul></section>
-                <section><h3>Download</h3><ul class="actions"><li><a href="Michael Akinwunmi.pdf" class="button small">Download Resume</a></li></ul></section>
-            </section>
-            <div style="text-align: right; font-size: 0; margin-top: 10px;"><span class="watermark-dot" title="Double-click to see watermark" ondblclick="alert('Built by DevPepperspray')"></span></div>
-        </footer>
+        <button class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 hamburger relative z-50" id="menuToggle">
+            <span class="block w-6 h-0.5 bg-gray-300 rounded-full transition-all"></span>
+            <span class="block w-6 h-0.5 bg-gray-300 rounded-full transition-all"></span>
+            <span class="block w-6 h-0.5 bg-gray-300 rounded-full transition-all"></span>
+        </button>
+        <div class="mobile-menu fixed inset-0 top-0 z-40 bg-[#0b0b0e]/95 backdrop-blur-xl md:hidden flex flex-col items-center justify-center gap-8 text-center" id="mobileMenu">
+            <a href="index.html" class="text-xl font-medium text-white hover:text-purple-400 transition">Projects</a>
+            <a href="frontend.html" class="text-xl font-medium text-white hover:text-purple-400 transition">Web Design</a>
+            <a href="certifications.html" class="text-xl font-medium text-white hover:text-purple-400 transition">Certifications</a>
+            <a href="contact.html" class="text-xl font-medium text-white hover:text-purple-400 transition">Contact</a>
+            <a href="contact.html" class="text-base font-medium text-white bg-gradient-to-r from-purple-600 to-indigo-600 px-8 py-3.5 rounded-xl shadow-lg shadow-purple-500/20 mt-4">
+                <i class="fa-regular fa-paper-plane mr-2"></i> Let's Talk
+            </a>
+        </div>
     </div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="relative min-h-[50vh] flex items-center pt-24 lg:pt-28 overflow-hidden bg-[#0b0b0e]">
+    <div class="glow-blob w-96 h-96 bg-rose-500/10 -top-40 -right-40"></div>
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 w-full relative z-10">
+        <div class="text-center" data-sr="enter bottom, wait 0.1s">
+            <span class="tag">Get in Touch</span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-white mt-4">
+                Let's Work <span class="gradient-text">Together</span>
+            </h1>
+            <p class="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto mt-4 leading-relaxed">
+                Have a data challenge or a design project? Reach out and let's make it happen.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT INFO + FORM ===== -->
+<section class="relative py-16 md:py-20 bg-[#0f0f14] border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-10" data-sr="enter bottom, wait 0.1s">
+            <!-- Left: Contact details -->
+            <div class="space-y-4">
+                <div class="glass-card rounded-2xl p-5 flex items-start gap-4">
+                    <div class="contact-icon bg-purple-500/15 text-purple-400"><i class="fa-regular fa-envelope"></i></div>
+                    <div>
+                        <h4 class="text-white font-semibold text-sm uppercase tracking-wider">Email</h4>
+                        <a href="mailto:michaelakinwunmi76@gmail.com" class="text-purple-400 hover:text-purple-300 transition text-sm">michaelakinwunmi76@gmail.com</a>
+                    </div>
+                </div>
+                <div class="glass-card rounded-2xl p-5 flex items-start gap-4">
+                    <div class="contact-icon bg-amber-500/15 text-amber-400"><i class="fa-solid fa-phone"></i></div>
+                    <div>
+                        <h4 class="text-white font-semibold text-sm uppercase tracking-wider">Phone</h4>
+                        <a href="tel:+2347054988472" class="text-gray-300 hover:text-white transition text-sm">+234-705-498-8472</a>
+                    </div>
+                </div>
+                <div class="glass-card rounded-2xl p-5 flex items-start gap-4">
+                    <div class="contact-icon bg-blue-500/15 text-blue-400"><i class="fa-solid fa-location-dot"></i></div>
+                    <div>
+                        <h4 class="text-white font-semibold text-sm uppercase tracking-wider">Location</h4>
+                        <p class="text-gray-300 text-sm">Lagos / Ibadan, Nigeria</p>
+                    </div>
+                </div>
+                <div class="glass-card rounded-2xl p-5 flex items-start gap-4">
+                    <div class="contact-icon bg-rose-500/15 text-rose-400"><i class="fa-solid fa-file-pdf"></i></div>
+                    <div>
+                        <h4 class="text-white font-semibold text-sm uppercase tracking-wider">Resume</h4>
+                        <a href="Michael Akinwunmi.pdf" download class="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 text-sm font-medium transition">
+                            <i class="fa-solid fa-download"></i> Download PDF Resume
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 pt-2">
+                    <a href="https://github.com/DevPepperspray" target="_blank" class="w-10 h-10 rounded-xl bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 flex items-center justify-center transition text-lg"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/michael-akinwunmi-2aa34a247" target="_blank" class="w-10 h-10 rounded-xl bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 flex items-center justify-center transition text-lg"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <!-- Right: Form -->
+            <div class="glass-card rounded-2xl p-6 md:p-8">
+                <h3 class="text-white font-bold text-lg mb-5">Send a Message</h3>
+                <form action="#" method="post" class="space-y-4">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div><label class="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-1.5">Name</label><input type="text" placeholder="Your name" class="input-dark w-full rounded-xl px-4 py-3 text-sm" /></div>
+                        <div><label class="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-1.5">Email</label><input type="email" placeholder="you@example.com" class="input-dark w-full rounded-xl px-4 py-3 text-sm" /></div>
+                    </div>
+                    <div><label class="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-1.5">Subject</label><input type="text" placeholder="How can I help?" class="input-dark w-full rounded-xl px-4 py-3 text-sm" /></div>
+                    <div><label class="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-1.5">Message</label><textarea rows="4" placeholder="Tell me about your project..." class="input-dark w-full rounded-xl px-4 py-3 text-sm resize-none"></textarea></div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold py-3.5 rounded-xl shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30 hover:scale-[1.01] transition-all">
+                        <i class="fa-regular fa-paper-plane mr-2"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ABOUT / EXPERIENCE SNAPSHOT ===== -->
+<section class="relative py-16 md:py-20 bg-[#0b0b0e] border-t border-white/5">
+    <div class="max-w-4xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="glass-card rounded-2xl p-6 md:p-8" data-sr="enter bottom, wait 0.1s">
+            <h3 class="text-white font-bold text-xl mb-4">About Me</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">
+                Data Analyst with 4+ years of experience developing data-driven solutions that enhance operational efficiency and profitability. Reduced reporting time by 40% through automation and improved marketing ROI by 22% via A/B test analysis. Proficient in SQL, Python, Power BI, and statistical modeling.
+            </p>
+            <div class="mt-4 grid sm:grid-cols-2 gap-4">
+                <div><span class="text-amber-400 font-semibold">DSN - Data Science Nigeria</span> <span class="text-gray-400 text-sm block">Data Analyst Intern · Aug–Oct 2023</span></div>
+                <div><span class="text-amber-400 font-semibold">EduCare</span> <span class="text-gray-400 text-sm block">Front-End Developer & Analyst · Apr 2021–Jan 2022</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="border-t border-white/5 bg-[#0b0b0e] py-8">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+        <p>&copy; 2025 <span class="text-white font-medium">Michael Akinwunmi</span>. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+            <a href="#" class="hover:text-white transition">Privacy</a>
+            <a href="#" class="hover:text-white transition">Terms</a>
+            <span class="text-gray-600">·</span>
+            <span class="text-xs">Built with <i class="fa-solid fa-heart text-rose-400"></i> by DevPepperspray</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.getElementById('menuToggle');
+        const mobile = document.getElementById('mobileMenu');
+        toggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mobile.classList.toggle('open');
+            document.body.classList.toggle('overflow-hidden');
+        });
+        mobile.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                toggle.classList.remove('active');
+                mobile.classList.remove('open');
+                document.body.classList.remove('overflow-hidden');
+            });
+        });
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('shadow-lg', window.scrollY > 20);
+            navbar.classList.toggle('shadow-black/20', window.scrollY > 20);
+        });
+        if (typeof ScrollReveal !== 'undefined') {
+            const sr = ScrollReveal({ distance: '40px', duration: 800, easing: 'ease-out-cubic', opacity: 0, scale: 0.96, reset: false, mobile: true });
+            sr.reveal('[data-sr]', { interval: 80 });
+        }
+    });
+</script>
 </body>
 </html>
