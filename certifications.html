@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Certifications · Michael Akinwunmi</title>
+    <title>Contact · Michael Akinwunmi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -27,22 +27,21 @@
         .hamburger.active span:nth-child(1){ transform:rotate(45deg) translate(5px,5px); }
         .hamburger.active span:nth-child(2){ opacity:0; }
         .hamburger.active span:nth-child(3){ transform:rotate(-45deg) translate(5px,-5px); }
-        .tag { display:inline-block; padding:0.25rem 0.9rem; border-radius:9999px; font-size:0.7rem; font-weight:600; text-transform:uppercase; background:rgba(168,85,247,0.15); color:#c084fc; border:1px solid rgba(168,85,247,0.15); }
-        .bg-amber-950\/60 { background:rgba(120,53,15,0.6) !important; }
-        .text-amber-200 { color:#fde68a !important; }
-        .cert-item { background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); border-radius:16px; padding:1.5rem; transition:border-color 0.3s; }
-        .cert-item:hover { border-color:rgba(168,85,247,0.2); }
-        .skill-tag { display:inline-block; background:rgba(168,85,247,0.08); color:#c084fc; padding:0.2rem 0.8rem; border-radius:9999px; font-size:0.7rem; font-weight:500; margin:0.2rem; border:1px solid rgba(168,85,247,0.06); }
+        .input-dark { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:#f0f0f5; transition:border-color 0.25s, box-shadow 0.25s; width:100%; padding:0.75rem 1rem; border-radius:12px; }
+        .input-dark:focus { outline:none; border-color:#8b5cf6; box-shadow:0 0 0 4px rgba(139,92,246,0.15); }
+        .input-dark::placeholder { color:#6b7280; }
         #mobileMenu { z-index:999; }
         #menuToggle { z-index:1000; }
         #navbar { z-index:50; }
+        .btn-primary { background:linear-gradient(135deg,#7c3aed,#4f46e5); color:white; font-weight:600; padding:0.75rem 2rem; border-radius:12px; border:none; transition:all 0.3s; }
+        .btn-primary:hover { transform:scale(1.02); box-shadow:0 0 30px rgba(124,58,237,0.3); }
         @media (max-width:640px){ .hero-title { font-size:2rem !important; } }
         [data-sr] { visibility:hidden; }
     </style>
 </head>
 <body>
 
-<!-- ===== NAVIGATION (SAME AS INDEX) ===== -->
+<!-- ===== NAVIGATION (SAME) ===== -->
 <header class="fixed top-0 left-0 w-full z-50 bg-[#0b0b0e]/80 backdrop-blur-xl border-b border-white/5" id="navbar">
     <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 flex items-center justify-between h-16 lg:h-20">
         <!-- Logo Section with fixed image classes -->
@@ -86,143 +85,121 @@
     </div>
 </header>
 
+
 <!-- ===== MAIN CONTENT ===== -->
 <section class="relative min-h-screen pt-28 lg:pt-32 pb-20 bg-[#0b0b0e]">
-    <div class="glow-blob w-80 h-80 bg-purple-600/15 -top-20 -left-20"></div>
-    <div class="glow-blob w-64 h-64 bg-indigo-500/10 -bottom-20 -right-20"></div>
-    <div class="max-w-5xl mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
+    <div class="glow-blob w-80 h-80 bg-purple-600/15 -top-20 -right-20"></div>
+    <div class="glow-blob w-64 h-64 bg-indigo-500/10 -bottom-20 -left-20"></div>
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
         <div class="text-center mb-14" data-sr="enter bottom, wait 0.1s">
-            <span class="tag bg-gradient-to-r from-yellow-600 to-pink-600 text-white font-bold">Credentials</span>
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4">Certifications</h1>
-            <div class="w-16 h-1 bg-gradient-to-r from-purple-500 to-black-500 rounded-full mx-auto mt-4"></div>
-            <p class="text-gray-400 text-base md:text-lg mt-4 max-w-2xl mx-auto">Validating my expertise in data analysis, machine learning, and data science.</p>
+            <span class="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-yellow-600 to-pink-600 border border-purple-500/20 text-white-300 text-xs font-bold tracking-wider uppercase">Let's Connect</span>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4">Get In Touch</h1>
+            <div class="w-16 h-1 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full mx-auto mt-4"></div>
+            <p class="text-gray-400 text-base md:text-lg mt-4 max-w-2xl mx-auto">Have a data challenge? Let's collaborate and turn insights into impact.</p>
         </div>
 
-        <!-- Certification list -->
-        <div class="grid gap-5" data-sr="enter bottom, wait 0.05s">
-            <div class="cert-item">
-                <div class="flex items-start gap-4 flex-wrap">
-                    
-                    <div>
-                        <h3 class="text-lg font-bold text-white">IBM Data Analyst Professional Certificate</h3>
-                        <p class="text-sm text-gray-400"><strong>IBM via Coursera</strong> · October 2022</p>
-                        <p class="text-gray-400 text-sm mt-1.5 leading-relaxed">Comprehensive certification covering Excel, SQL, Python, R, and Power BI for data analysis.</p>
-                        <div class="flex flex-wrap gap-1.5 mt-2">
-                            <span class="skill-tag text-white">Data Analysis</span>
-                            <span class="skill-tag text-white">Python</span>
-                            <span class="skill-tag text-white">SQL</span>
-                            <span class="skill-tag text-white">Power BI</span>
-                        </div>
-                    </div>
+        <div class="grid md:grid-cols-2 gap-8" data-sr="enter bottom, wait 0.05s">
+            <!-- Contact Info -->
+            <div class="glass-card rounded-2xl p-6 md:p-8">
+                <h2 class="text-xl font-bold text-white mb-6">Contact Information</h2>
+                <ul class="space-y-4 text-gray-300">
+                    <li class="flex items-center gap-4"><span class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400"><i class="fa-regular fa-envelope"></i></span> <a href="mailto:michaelakinwunmi76@gmail.com" class="hover:text-purple-400 transition">michaelakinwunmi76@gmail.com</a></li>
+                    <li class="flex items-center gap-4"><span class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400"><i class="fa-solid fa-phone"></i></span> +234-7054988472</li>
+                    <li class="flex items-center gap-4"><span class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400"><i class="fa-solid fa-location-dot"></i></span> Lagos / Ibadan, Nigeria</li>
+                    <li class="flex items-center gap-4"><span class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400"><i class="fa-brands fa-linkedin"></i></span> <a href="https://www.linkedin.com/in/michael-akinwunmi-2aa34a247" target="_blank" class="hover:text-purple-400 transition">linkedin.com/in/michael-akinwunmi</a></li>
+                    <li class="flex items-center gap-4"><span class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400"><i class="fa-brands fa-github"></i></span> <a href="https://github.com/DevPepperspray" target="_blank" class="hover:text-purple-400 transition">github.com/DevPepperspray</a></li>
+                </ul>
+                <div class="mt-8">
+                    <a href="Michael Akinwunmi.pdf" download class="inline-flex items-center gap-3 bg-gradient-to-r from-red-600 to-indigo-600 text-white font-semibold px-6 py-3 rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 transition-all">
+                        <i class="fa-solid fa-file-pdf"></i> Download Resume (PDF)
+                    </a>
+                </div>
+                <div class="flex gap-4 mt-6">
+                    <a href="https://github.com/DevPepperspray" target="_blank" class="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-purple-500/30 transition text-lg"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/michael-akinwunmi-2aa34a247" target="_blank" class="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-purple-500/30 transition text-lg"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:michaelakinwunmi76@gmail.com" class="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-purple-500/30 transition text-lg"><i class="fa-regular fa-envelope"></i></a>
                 </div>
             </div>
 
-            <div class="cert-item">
-                <div class="flex items-start gap-4 flex-wrap">
-                    <div>
-                        <h3 class="text-lg font-bold text-white">Professional Certificate: Finance Data Analysis & Analytics</h3>
-                        <p class="text-sm text-gray-400"><strong>Institute of Management, Technology and Finance</strong> · Sep 2025 – Nov 2025</p>
-                        <p class="text-gray-400 text-sm mt-1.5 leading-relaxed">Specialised training in financial data analysis, forecasting, and analytics for business decision-making.</p>
-                        <div class="flex flex-wrap gap-1.5 mt-2">
-                            <span class="skill-tag text-white">Financial Analytics</span>
-                            <span class="skill-tag text-white">Forecasting</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- Contact Form -->
+            <div class="glass-card rounded-2xl p-6 md:p-8">
+    <h2 class="text-xl font-bold text-white mb-6">Send a Message</h2>
+    <form method="post" action="#">
+        <div class="space-y-4">
+            <input type="text" name="name" placeholder="Your Name" class="input-dark" required />
+            <input type="email" name="email" placeholder="Your Email" class="input-dark" required />
+            <input type="text" name="subject" placeholder="Subject" class="input-dark" />
+            <textarea name="message" rows="5" placeholder="Tell me about your project..." class="input-dark" style="resize:vertical;"></textarea>
+            
+            <!-- Updated button with custom gradient and interactive effects -->
+            <button type="submit" class="w-full flex items-center justify-center gap-2 text-sm font-medium text-white bg-gradient-to-r from-yellow-600 to-pink-600 hover:from-yellow-500 hover:to-pink-500 active:scale-95 transition-all duration-200 px-5 py-3 rounded-xl shadow-lg shadow-pink-600/20">
+                <i class="fa-regular fa-paper-plane"></i> Send Message
+            </button>
+        </div>
+    </form>
+</div>
 
-            <div class="cert-item">
-                <div class="flex items-start gap-4 flex-wrap">
-                    
-                    <div>
-                        <h3 class="text-lg font-bold text-white">Data Science Program</h3>
-                        <p class="text-sm text-gray-400"><strong>Learnify Academy</strong> · November 2025</p>
-                        <p class="text-gray-400 text-sm mt-1.5 leading-relaxed">Advanced data science training covering machine learning, statistical analysis, and predictive modeling.</p>
-                        <div class="flex flex-wrap gap-1.5 mt-2">
-                            <span class="skill-tag text-white">Machine Learning</span>
-                            <span class="skill-tag text-white">Statistical Analysis</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cert-item">
-                
-                    
-                    <div>
-                        <h3 class="text-lg font-bold text-white">CompTIA A+ Certification</h3>
-                        <p class="text-sm text-gray-400"><strong>New Horizons Computer Learning Centre</strong> · October 2020</p>
-                        <p class="text-gray-400 text-sm mt-1.5 leading-relaxed">Fundamental IT certification covering hardware, software, networking, and security basics.</p>
-                        <div class="flex flex-wrap gap-1.5 mt-2">
-                            <span class="skill-tag text-white">Hardware</span>
-                            <span class="skill-tag text-white">Networking</span>
-                            <span class="skill-tag text-white">Security</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cert-item">
-                <div class="flex items-start gap-4 flex-wrap">
-                    
-                    <div>
-                        <h3 class="text-lg font-bold text-white">Cyber Security Fundamentals</h3>
-                        <p class="text-sm text-gray-400"><strong>Cisco Networking Academy</strong> · Feb 2021 – Jun 2021</p>
-                        <p class="text-gray-400 text-sm mt-1.5 leading-relaxed">Cybersecurity basics including threat prevention, network security, and data protection principles.</p>
-                        <div class="flex flex-wrap gap-1.5 mt-2">
-                            <span class="skill-tag text-white">Cyber Security</span>
-                            <span class="skill-tag text-white">Threat Prevention</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
 
-        <!-- ===== TECHNICAL SKILLS (UPDATED with R, TailwindCSS, JavaScript) ===== -->
-        <div class="mt-16 ml-5 mr-5" data-sr="enter bottom, wait 0.1s"></div>            <h2 class="text-2xl sm:text-3xl font-bold text-white text-center">Technical Skills</h2>
+        <!-- About & Experience -->
+        <div class="mt-16 ml-5 mr-5 lg:ml-20 lg:mr-20 md:ml-10 md:mr-10" data-sr="enter bottom, wait 0.1s">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white text-center">About Me</h2>
             <div class="w-16 h-1 bg-gradient-to-r from-purple-500 to-black-500 rounded-full mx-auto mt-3"></div>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 py-6">
+            <div class="grid md:grid-cols-3 gap-6 mt-8">
+                <div class="glass-card rounded-xl p-6 md:col-span-1">
+                    <img src="https://github.com/DevPepperspray/DevPepperspray.github.io/blob/main/images/profile.jpg?raw=true" alt="Michael" class="rounded-xl w-full object-cover" />
+                </div>
+                <div class="glass-card rounded-xl p-6 md:col-span-2">
+                    <p class="text-gray-300 leading-relaxed">Data Analyst with 3+ years of experience developing data-driven solutions that enhance operational efficiency and profitability. Reduced reporting time by 40% through automation and improved marketing ROI by 22% via A/B test analysis. Proficient in SQL, Python, Power BI, and statistical modeling.</p>
+                    <p class="text-gray-300 leading-relaxed mt-3">I specialise in the full data lifecycle—from collection and cleaning to advanced analysis and visualization. My background spans healthcare, real estate, and finance.</p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-white-300 font-bold text-xs font-medium">Python</span>
+                        <span class="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-white-300 font-bold text-xs font-medium">SQL</span>
+                        <span class="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-white-300 font-bold text-xs font-medium">Power BI</span>
+                        <span class="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-white-300 font-bold text-xs font-medium">R</span>
+                        <span class="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-white-300 font-bold text-xs font-medium">JavaScript</span>
+                        <span class="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-white-300 font-bold text-xs font-medium">TailwindCSS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="mt-12" data-sr="enter bottom, wait 0.1s">
+            <h2 class="text-2xl font-bold text-white text-center">Professional Experience</h2>
+            <div class="w-16 h-1 bg-gradient-to-r from-purple-500 to-black-500 rounded-full mx-auto mt-3"></div>
+            <div class="grid md:grid-cols-2 gap-6 mt-8">
                 <div class="glass-card rounded-xl p-6">
-                    <h3 class="text-sm font-semibold uppercase tracking-wider text-white-400 mb-3"><i class="fa-solid fa-code mr-2 text-white"></i>Programming & Databases</h3>
-                    <div class="flex flex-wrap gap-1.5">
-                        <span class="skill-tag bg-black text-white font-bold">Python (Pandas, BS4, Sklearn)</span>
-                        <span class="skill-tag bg-black text-white font-bold">SQL</span>
-                        <span class="skill-tag bg-black text-white font-bold">Google BigQuery</span>
-                        <span class="skill-tag bg-black text-white font-bold">R</span>
-                        <span class="skill-tag bg-black text-white font-bold">ETL/ELT</span>
-                        <span class="skill-tag bg-black text-white font-bold">JavaScript</span>
-                    </div>
+                    <h3 class="text-lg font-bold text-white">DSN - Data Science Nigeria</h3>
+                    <p class="text-sm text-gray-400"><strong>Data Analyst Intern</strong> · Aug 2023 – Oct 2023 · Lagos</p>
+                    <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mt-2">
+                        <li>Automated data collection, reducing reporting time by 40%</li>
+                        <li>Developed stock price prediction model with 90% accuracy</li>
+                        <li>Built web scraping pipelines with Beautiful Soup</li>
+                        <li>Created Power BI dashboards for real-time campaign adjustments</li>
+                    </ul>
                 </div>
                 <div class="glass-card rounded-xl p-6">
-                    <h3 class="text-sm font-semibold uppercase tracking-wider text-white-400 mb-3"><i class="fa-solid fa-chart-pie mr-2 text-white"></i>Visualization & BI</h3>
-                    <div class="flex flex-wrap gap-1.5">
-                        <span class="skill-tag bg-black text-white font-bold">Power BI</span>
-                        <span class="skill-tag bg-black text-white font-bold">Tableau</span>
-                        <span class="skill-tag bg-black text-white font-bold">Excel (PivotTables)</span>
-                        <span class="skill-tag bg-black text-white font-bold">Looker</span>
-                        <span class="skill-tag bg-black text-white font-bold">TailwindCSS</span>
-                    </div>
+                    <h3 class="text-lg font-bold text-white">EduCare</h3>
+                    <p class="text-sm text-gray-400"><strong>Front-End Developer & Analyst</strong> · Apr 2021 – Jan 2022 · Lagos</p>
+                    <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mt-2">
+                        <li>Translated business requirements into technical specs</li>
+                        <li>Designed reusable templates, reducing design workload by 60%</li>
+                        <li>Queried SQL databases for content and user data</li>
+                        <li>Built predictive models for user engagement</li>
+                    </ul>
                 </div>
-                <div class="glass-card rounded-xl p-6">
-                    <h3 class="text-sm font-semibold uppercase tracking-wider text-white-400 mb-3"><i class="fa-solid fa-chart-simple mr-2 text-white"></i>Analysis & Modeling</h3>
-                    <div class="flex flex-wrap gap-1.5">
-                        <span class="skill-tag bg-black text-white font-bold">Statistical Analysis</span>
-                        <span class="skill-tag bg-black text-white font-bold">Predictive Modeling</span>
-                        <span class="skill-tag bg-black text-white font-bold">Machine Learning</span>
-                        <span class="skill-tag bg-black text-white font-bold">Customer Segmentation</span>
-                        <span class="skill-tag bg-black text-white font-bold">A/B Testing</span>
-                        <span class="skill-tag bg-black text-white font-bold">SPSS</span>
-                    </div>
-                </div>
-                <div class="glass-card rounded-xl p-6 sm:col-span-2 lg:col-span-3">
-                    <h3 class="text-sm font-semibold uppercase tracking-wider text-white-400 mb-3"><i class="fa-solid fa-database mr-2 text-white"></i>Data Management</h3>
-                    <div class="flex flex-wrap gap-1.5">
-                        <span class="skill-tag bg-black text-white font-bold">Data Scraping</span>
-                        <span class="skill-tag bg-black text-white font-bold">Data Wrangling</span>
-                        <span class="skill-tag bg-black text-white font-bold">Database Management</span>
-                        <span class="skill-tag bg-black text-white font-bold">Automated Reporting</span>
-                    </div>
-                </div>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="mt-12" data-sr="enter bottom, wait 0.1s">
+            <h2 class="text-2xl font-bold text-white text-center">Education</h2>
+            <div class="w-16 h-1 bg-gradient-to-r from-purple-500 to-black-500 rounded-full mx-auto mt-3"></div>
+            <div class="glass-card rounded-xl p-6 mt-4 grid sm:grid-cols-3 gap-4 text-center">
+                <div><p class="font-semibold text-white">B.Sc. Estate Management</p><p class="text-gray-400 text-sm">University of Ibadan · Expected 2026</p></div>
+                <div><p class="font-semibold text-white">Data Science Program</p><p class="text-gray-400 text-sm">Learnify Academy · Nov 2025</p></div>
+                <div><p class="font-semibold text-white">CompTIA A+</p><p class="text-gray-400 text-sm">New Horizons · Oct 2020</p></div>
             </div>
         </div>
     </div>
@@ -231,9 +208,10 @@
 <!-- ===== FOOTER ===== -->
 <footer class="border-t border-white/5 bg-[#0b0b0e] py-8">
     <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-        <div class="flex items-center gap-6">
-                    <span class="text-gray-600">·</span>
-            <span class="text-xs">Built with <i class="fa-solid fa-heart text-rose-400"></i> by DevPepperspray</span>
+        
+        <div class="flex items-center justify-center gap-6">
+                        
+            <span class="text-xs flex">Built with <i class="fa-solid fa-heart text-rose-400"></i> by DevPepperspray</span>
         </div>
     </div>
 </footer>
