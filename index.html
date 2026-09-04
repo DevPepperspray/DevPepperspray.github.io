@@ -6,6 +6,7 @@
 <title>Michael Akinwunmi — Full-Stack Developer & Data Analyst</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Great+Vibes&display=swap" rel="stylesheet" />
 
 <style>
   :root{
@@ -46,6 +47,17 @@
     transition: opacity .2s ease;
     font-size:.95rem;
   }
+
+  /* fancy logo style */
+.fancy-logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  padding: 0.4rem 1.2rem;
+  letter-spacing: 0.03em;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  white-space: nowrap;
+}
   .nav-link:hover{ opacity:1; }
   .nav-link.active{ opacity:1; }
 
@@ -253,9 +265,9 @@
 <!-- NAV -->
 <header class="fixed top-0 left-0 w-full z-50 on-ink border-b rule-dark" id="navbar">
   <div class="max-w-6xl mx-auto px-5 sm:px-8 flex items-center justify-between h-16">
-    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-[#0b0b0e] font-extrabold text-sm shadow-lg shadow-amber-500/20">
-          Dev Pepperspray
-        </div>
+    <div class="rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 shadow-lg shadow-amber-500/20 flex items-center justify-center fancy-logo text-[#0b0b0e]">
+        Dev Pepperspray
+      </div>
     
             
     <nav class="hidden md:flex items-center gap-8">
